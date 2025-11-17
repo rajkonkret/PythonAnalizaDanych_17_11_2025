@@ -177,3 +177,22 @@ print(lista_ze_zbioru)  # [66, 100, 102, 105, 77, 45, 55]
 matrix = [[3, 4, 5], [6, 7], [8, 9, 0]]
 print(matrix)  # [[3, 4, 5], [6, 7], [8, 9, 0]]
 print(matrix[0][0])  # 3
+
+imie = input("Podaj imię:")
+print(imie)
+# Podaj imię:Radek
+# Radek
+
+# input zwraca str
+a = input("Podaj liczbę a:")
+print(type(a))
+b = input("Podaj liczbę b:")
+print(type(b))
+print(int(a) + float(b))
+# Podaj imię:radek
+# radek
+# Podaj liczbę a:1
+# <class 'str'>
+# Podaj liczbę b:2
+# <class 'str'>
+# 3.0
