@@ -92,6 +92,7 @@ print(len(krotka))  # długośc 4
 # a,b,c,d
 # (23, 34, 56, 'Radek')
 a = krotka[0]
+a, b, c, d = krotka
 a, b, c, d = (23, 34, 56, 'Radek')  # przypisanie kolejnych wartosci do kolejnych zmiennych
 print(a, b, c, d)  # 23 34 56 Radek
 a, b, *c = (23, 34, 56, 'Radek')  # * pozostałe elementy (worek na dane)
@@ -100,5 +101,37 @@ print(a, b, c)  # 23 34 [56, 'Radek']
 a, *b, c = (23, 34, 56, 'Radek')
 print(a, b, c)  # 23 [34, 56] Radek
 
+# nie ma możliwości zmiany krotki
 # krotka[0] = 4  # TypeError: 'tuple' object does not support item assignment
 
+# słownik - dane typu klucz-wartosc
+# odpowiednik jsona
+oceny = {
+    "Tomek": 4,
+    "Radek": 5,
+    "agata": 5,
+    "Zenek": 6,
+}
+
+print(oceny)  # {'Tomek': 4, 'Radek': 5, 'agata': 5, 'Zenek': 6}
+print(type(oceny))  # <class 'dict'>
+print(oceny['Tomek'])  # 4
+# print(oceny['tomek'])  # KeyError: 'tomek'
+print(oceny.get("Tomek"))  # 4
+print(oceny.get("tomek", "default"))  # default
+
+print(oceny.keys())
+print(oceny.values())
+print(oceny.items())
+# dict_keys(['Tomek', 'Radek', 'agata', 'Zenek'])
+# dict_values([4, 5, 5, 6])
+# dict_items([('Tomek', 4), ('Radek', 5), ('agata', 5), ('Zenek', 6)])
+
+oceny['agata'] = 6
+print(oceny)  # {'Tomek': 4, 'Radek': 5, 'agata': 6, 'Zenek': 6}
+
+lista_oceny = [3, 4, 5, 6, 5, 5]
+oceny['Tomek'] = lista_oceny
+print(oceny)
+# {'Tomek': [3, 4, 5, 6, 5, 5], 'Radek': 5, 'agata': 6, 'Zenek': 6}
+print(oceny['Tomek'][2])  # 5
