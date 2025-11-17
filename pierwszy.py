@@ -148,3 +148,23 @@ print("Wynik:", liczba)  # Wynik: 3.900001
 #   sep
 #         string inserted between values, default a space.
 print("wynik:", liczba, sep="....")  # wynik:....3.900001
+
+print(100 / 3)  # 33.333333333333336
+print(100 // 3)  # 33
+print(100 % 3)  # modulo, reszta z dzielenia, 1
+
+zysk = 8901234567654
+print(f'Nasza duza liczba: {zysk}')
+print(f'Nasza duza liczba: {zysk:,}')  # Nasza duza liczba: 8,901,234,567,654
+print(f'Nasza duza liczba: {zysk:_}')  # Nasza duza liczba: 8_901_234_567_654
+print(f'Nasza duza liczba: {zysk:_}'.replace("_", " "))  # Nasza duza liczba: 8 901 234 567 654
+
+paramter = 1_000_000_000
+print(paramter)  # 1000000000
+print(type(paramter))  # <class 'int'>
+
+encoded_text = tekst.encode("utf-8")
+print(encoded_text)  # b'Witaj \xc5\x9awiecie'
+# \xc5\x9a - kod litery Ś w sytemie szesnastkowym -> \x
+print(type(encoded_text))  # <class 'bytes'>
+print(encoded_text.decode("utf-8"))  # Witaj Świecie
