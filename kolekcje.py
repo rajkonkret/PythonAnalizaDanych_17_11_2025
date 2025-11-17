@@ -74,3 +74,31 @@ print(id(lista_copy))  # 1804423946112
 print(id(nowa_lista))  # 1804424478016
 print(id(lista_pusta))  # 1804424478016
 
+# krotka - tuple - lista tylko do odczytu
+# pozwala lepiej zarządzac pamięcią
+krotka = (23, 34, 56, 'Radek')
+print(type(krotka))  # <class 'tuple'>
+print(krotka)  # (23, 34, 56, 'Radek')
+
+krotka1 = "radek", "tomek", "zenek"
+print(type(krotka1))
+print(krotka1)  # ('radek', 'tomek', 'zenek')
+
+krotka2 = ("Radek",)
+print(krotka2)  # ('Radek',)
+
+# rozpakowanie krotki
+print(len(krotka))  # długośc 4
+# a,b,c,d
+# (23, 34, 56, 'Radek')
+a = krotka[0]
+a, b, c, d = (23, 34, 56, 'Radek')  # przypisanie kolejnych wartosci do kolejnych zmiennych
+print(a, b, c, d)  # 23 34 56 Radek
+a, b, *c = (23, 34, 56, 'Radek')  # * pozostałe elementy (worek na dane)
+print(a, b, c)  # 23 34 [56, 'Radek']
+
+a, *b, c = (23, 34, 56, 'Radek')
+print(a, b, c)  # 23 [34, 56] Radek
+
+# krotka[0] = 4  # TypeError: 'tuple' object does not support item assignment
+
