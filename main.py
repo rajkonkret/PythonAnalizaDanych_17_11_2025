@@ -14,3 +14,6 @@ if __name__ == '__main__':
     print_hi('PyCharm')
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
+# 2 x shift
+# (.venv) PS C:\Users\CSComarch\PycharmProjects\PythonAnalizaDanych_17_11_2025> python .\main.py
+# Hi, PyCharm
