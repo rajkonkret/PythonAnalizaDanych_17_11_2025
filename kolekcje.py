@@ -47,3 +47,30 @@ print(lista_pusta[::-1])
 # [345, 'Zenek', 'Tomek', 'Radek', 'Piotr', 'Magda', 'Aga']
 
 print(lista_pusta[45:90])  # []
+
+# usunięcie elementu
+lista_pusta.remove("Magda")  # usunie pierwszą od lewej
+print(lista_pusta)  # ['Aga', 'Piotr', 'Radek', 'Tomek', 'Zenek', 345]
+
+osoby = ['Tomek', 'Ewa', "Adam"]
+osoby.extend(lista_pusta)
+print(osoby)  # ['Tomek', 'Ewa', 'Adam', 'Aga', 'Piotr', 'Radek', 'Tomek', 'Zenek', 345]
+
+a = 1
+b = 2
+a = b
+print(f"{a=}, {b=}")  # a=2, b=2
+b = 3
+print(f"{a=}, {b=}")  # a=2, b=3
+
+nowa_lista = lista_pusta  # kopia referesncji, adresu
+lista_copy = lista_pusta.copy()
+print(lista_pusta)  # ['Aga', 'Piotr', 'Radek', 'Tomek', 'Zenek', 345]
+print(nowa_lista)  # ['Aga', 'Piotr', 'Radek', 'Tomek', 'Zenek', 345]
+lista_pusta.clear()  # usunięcie wszystkich elementów z listy
+print(lista_pusta)  # []
+print(lista_copy)  # ['Aga', 'Piotr', 'Radek', 'Tomek', 'Zenek', 345]
+print(id(lista_copy))  # 1804423946112
+print(id(nowa_lista))  # 1804424478016
+print(id(lista_pusta))  # 1804424478016
+
