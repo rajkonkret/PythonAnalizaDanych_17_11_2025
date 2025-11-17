@@ -37,5 +37,19 @@ def ksero2(tekst: str, ile=1):  # argumenty z wartoscią domyślną
     return str(tekst) * ile  # zwraca wynik (return)
 
 
-print("Radek")  # Radek
-print("Radek", 3)  # Radek 3
+print(ksero2("Radek"))  # Radek
+print(ksero2("Radek", 3))  # RadekRadekRadek
+
+
+def ile_razy(*ile, **co):
+    print(ile)  # (4, 5, 6)
+    print(co)
+
+
+# * argumenty pozycyjne
+# ** argumenty nazwane, słownikowe
+ile_razy(4, 5, 6)  # (4, 5, 6) -> ile
+ile_razy(a=10, b=67, c=90)  # {'a': 10, 'b': 67, 'c': 90} -> co
+ile_razy(4, 5, 6, a=10, b=45, c=90)
+# (4, 5, 6)
+# {'a': 10, 'b': 45, 'c': 90}
