@@ -61,3 +61,48 @@ print(name)  # 90
 # pierwszy.py:52: error: Incompatible types in assignment (expression has type "int", variable has type "str")  [assignment]
 # Found 3 errors in 1 file (checked 1 source file)
 # (.venv) PS C:\Users\CSComarch\PycharmProjects\PythonAnalizaDanych_17_11_2025>
+
+# teksty są niemutowalne
+tekst = "Witaj Świecie"
+tekst.upper()
+print(tekst)  # Witaj Świecie, nie uległo zmianie
+""" Return a copy of the string converted to uppercase. """
+print(tekst.upper())  # WITAJ ŚWIECIE
+zmienna = tekst.upper()
+print(zmienna)
+
+# ctrl d - powielenie lini
+print(zmienna.lower())  # witaj świecie
+print(zmienna.capitalize())  # Witaj świecie
+
+zmienna1 = "GROSS"
+zmienna2 = "groẞ"
+
+# == porównanie
+print(zmienna1.lower() == zmienna2.lower())  # False
+print(zmienna1.casefold() == zmienna2.casefold())  # True - wg zasad unicode
+
+# != rózne
+print(1 != 8)  # True
+
+# rzutowanie - zamiana typów
+print(int("39"))  # rzytowanie na int
+print(str(39))  # rzutowanie na str
+print(168 * "35")
+print(168 * 35)  # 5880
+print(10 * "-")  # ----------
+print(int(168) * int("35"))  # 5880
+
+print(int(True))  # 1
+print(int(False))  # 0
+
+print(bool(1))  # True
+print(bool(0))  # False
+
+print(bool(100))  # True
+print(bool("radek"))  # True
+
+print(bool(""))  # False
+
+# None - odpowiednik null, nie wiem, stan nieokreslony
+print(bool(None))  # False
