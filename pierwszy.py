@@ -106,3 +106,45 @@ print(bool(""))  # False
 
 # None - odpowiednik null, nie wiem, stan nieokreslony
 print(bool(None))  # False
+
+temp = 36.6
+print(type(temp))  # <class 'float'>
+print(temp)  # 36.6
+print(sys.float_info)
+# sys.float_info(max=1.7976931348623157e+308, max_exp=1024, max_10_exp=308, min=2.2250738585072014e-308,
+# min_exp=-1021, min_10_exp=-307, dig=15, mant_dig=53, epsilon=2.220446049250313e-16, radix=2, rounds=1)
+
+print(0.1 + 0.9)  # 1.0
+print(0.1 + 0.2)  # 0.30000000000000004
+#  For example, in a floating-point arithmetic with five base-ten digits,
+#  the sum 12.345 + 1.0001 = 13.3451 might be rounded to 13.345.
+
+# decimal - ominięcie problemu zaokrąglenia
+
+# f - string format
+name = "Radek"
+print(f"Nazywam się {name}")  # Nazywam się Radek
+print("Nazywam się {}.".format(name))  # Nazywam się Radek.
+
+liczba = 3.900001
+print(f"Wersja pythona: {liczba}")  # Wersja pythona: 3.900001
+print(f"Wersja pythona: {liczba:.2f}")  # Wersja pythona: 3.90
+
+print(f"""Teskt
+    wielolinijkowy""")
+# "Teskt
+#     wielolinijkowy"
+
+"""Komentarz
+wielolinijowy.
+Komentarz dokumentacyjny"""
+print(print.__doc__)  # dokumentacja
+
+starszy = 'Mam na imię %s'
+# %s - str
+print(starszy % name)  # Mam na imię Radek
+
+print("Wynik:", liczba)  # Wynik: 3.900001
+#   sep
+#         string inserted between values, default a space.
+print("wynik:", liczba, sep="....")  # wynik:....3.900001
