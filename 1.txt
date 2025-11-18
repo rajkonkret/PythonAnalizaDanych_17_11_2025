@@ -20,3 +20,8 @@ tables = pd.read_html(html)  # lista DataFrame’ów z tabeli na stronie
 print(len(tables))
 df = tables[0]                    # np. pierwsza tabela
 print(df.head())
+------
+labels = ["Jabłka", "Banany", "Winogrona", "Pomarańcze"]
+sizes = [30, 25, 20, 45]
+colors = ['red', "blue", 'green', "yellow"]
+plt.title("wykres kołowy")
